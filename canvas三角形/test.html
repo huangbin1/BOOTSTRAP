@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+  window.onload = function(){
+    var oC=document.getElementById("oc");
+	var oaa=oc.getContext("2d");
+    oaa.beginPath();
+    oaa.moveTo(50,100);
+    oaa.lineTo(50,200);
+    oaa.lineTo(100,100);
+    oaa.lineTo(50,100);
+    oaa.fillStyle="pink";
+    oaa.fill();
+    oaa.closePath();
+
+    oaa.beginPath();
+    oaa.moveTo(200,100);
+    oaa.lineTo(200,200);
+    oaa.lineTo(250,100);
+    oaa.lineTo(200,100);
+    oaa.strokeStyle="pink";
+    oaa.lineWidth="10px";
+    oaa.stroke();
+    oaa.closePath();
+
+};
+</script>
+</head>
+<body>
+    <canvas id="oc" width="500" height="400"></canvas>
+</body>
+</html>

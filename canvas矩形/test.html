@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+  window.onload = function(){
+    var oC=document.getElementById("oc");
+	var oRect=oc.getContext("2d");
+    oRect.beginPath();
+    oRect.rect(50,50,100,50);
+    oRect.fillStyle="pink";
+	oRect.fill();
+    oRect.closePath();
+
+     oRect.beginPath();
+     oRect.rect(50,150,100,50);
+     oRect.strokeStyle="pink";
+     oRect.lineWidth="5px";  //边框粗细
+     oRect.stroke();
+     oRect.closePath();
+
+};
+</script>
+</head>
+<body>
+    <canvas id="oc" width="500" height="400"></canvas>
+</body>
+</html>

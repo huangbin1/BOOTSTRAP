@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style type="text/css">
+    .test{
+        height:400px;
+        width:100%;
+    }
+    .left{
+       float:left;
+       width:400px;
+       background:red;
+       height:400px;
+    }
+    .right{
+        margin-left:420px;   /*本来是相对于左侧div有420px距离，但是它已经脱离文档流，*/
+       /*float:right;不需要right这样才会自动填充剩下宽度*/
+        background:green;
+        height:400px;
+    }
+
+
+  .test1{
+      
+       width:100%;
+       height:400px;
+    }
+    .left1{
+       height:300px;margin-right:420px;background:#DDD;
+    }
+    .right1{
+       width:400px;height:300px;float:right;background:#AAA;
+    }
+
+
+    .test2{
+      
+       width:100%;
+       height:400px;
+    }
+    .left2{
+       width:100px;
+       height:400px;
+       background: red;
+       float:left;
+    }
+    .right2{
+       width:100px;
+       height:400px;
+       background: blue;
+       float:right;
+    } 
+    .center2{
+       height:400px;
+       background: green;
+       margin-left:110px;
+       margin-right:110px;
+    }
+
+    .t{
+        display:flex;/*设为伸缩容器*/  
+        height:400px;
+       
+    }
+    .l{
+       width:400px;/*固定宽度*/  
+        height:400px;
+        background: red;
+    }
+    .r{
+        flex-grow: 1;/*自适应*/ 
+        height:400px;
+        background: green;
+    }
+
+    .t1{
+        display:flex;/*设为伸缩容器*/  
+        height:400px;
+    }
+    .l1{
+        flex-grow: 1; 
+        height:400px;
+        background: red;
+    }
+    .r1{
+        width:400px;
+        height:400px;
+        background: green;
+    }
+    .t2{
+        display:flex;/*设为伸缩容器*/  
+        height:400px;
+    }
+    .l2 ,.r2{
+        width:400px;
+        height:400px;
+        background: red;
+    }
+    .c2{
+        flex-grow:1;
+        height:400px;
+        background: green;
+    }
+    </style>
+</head>
+<body>
+    <p>左固定，右自适应</p>
+    <div class="test">
+        <div class="left">内容1</div>
+        <div class="right">内容2</div>
+    </div>
+    <p>左自适应，右固定（为什么浮动的要写在前面？）</p>
+    <div class="test1">
+        <div class="right1">右侧浮动</div>
+         <div class="left1">左侧自适应</div>
+    </div>
+    <p>左右固定，中间自适应（为什么浮动的要写在前面？）</p>
+    <div class="test2">
+         <div class="left2">左侧的浮动</div>
+         <div class="right2">右侧的浮动</div>
+         <div class="center2">中间自适应</div>
+    </div>
+
+
+    <p>flex 左固定，右自适应</p>
+    <div class="t">
+        <div class="l">左固定</div>
+        <div class="r">右自适应</div>
+    </div>
+
+     <p>flex 右固定，左自适应</p>
+     <div class="t1">
+        <div class="l1">左自适应</div>
+        <div class="r1">右边固定</div>
+     </div>
+
+     <p>flex 左右固定，中间自适应</p>
+     <div class="t2">
+        <div class="l2">左固定</div>
+        <div class="c2">中间固定</div>
+        <div class="r2">右自适应</div>
+     </div>
+
+    
+    
+</body>
+</html>
